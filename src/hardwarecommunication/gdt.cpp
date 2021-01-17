@@ -1,4 +1,4 @@
-#include "hardwarecommunication/gdt.h"
+#include <hardwarecommunication/gdt.h>
 
 GlobalDescriptorTable::GlobalDescriptorTable()
     : nullSegmentSelector(0, 0, 0),

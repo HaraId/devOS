@@ -1,13 +1,14 @@
 #ifndef _DHARMA_MOUSE_H
 #define _DHARMA_MOUSE_H
 
-#include "common/types.h"
-#include "hardwarecommunication/interrupts.h"
-#include "hardwarecommunication/port.h"
+#include <common/types.h>
+#include <hardwarecommunication/interrupts.h>
+#include <hardwarecommunication/port.h>
 
-#include "drivers/driver.h"
+#include <drivers/driver.h>
 
-#include "tx/stdio.h"
+#include <tm/stdio.h>
+
 
 class PS2MouseDriver : public InterruptHandler, public Driver
 {

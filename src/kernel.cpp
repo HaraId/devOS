@@ -1,11 +1,11 @@
-#include "hardwarecommunication/stdio.h"
-#include "hardwarecommunication/gdt.h"
-#include "hardwarecommunication/interrupts.h"
+#include <tm/stdio.h>
+#include <hardwarecommunication/gdt.h>
+#include <hardwarecommunication/interrupts.h>
 
-#include "drivers/driver.h"
+#include <drivers/driver.h>
 
-#include "drivers/PS2Keyboard.h"
-#include "drivers/PS2Mouse.h"
+#include <drivers/PS2Keyboard.h>
+#include <drivers/PS2Mouse.h>
  
  
 typedef void (*constructor)();

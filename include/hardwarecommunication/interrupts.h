@@ -1,9 +1,9 @@
 #ifndef __DHARMA_INTERRUPTS_H_
 #define __DHARMA_INTERRUPTS_H_
 
-#include "common/types.h"
-#include "hardwarecommunication/port.h"
-#include "hardwarecommunication/gdt.h"
+#include <common/types.h>
+#include <hardwarecommunication/port.h>
+#include <hardwarecommunication/gdt.h>
 
 //extern "C" void __cxa_pure_virtual() { while(1);}
 

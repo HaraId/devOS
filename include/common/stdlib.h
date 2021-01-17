@@ -1,7 +1,7 @@
 #ifndef __DHARMA_STDLIB_H
 #define __DHARMA_STDLIB_H
 
-#include "common/types.h"
+#include <common/types.h>
 
 int8_t memcmp(const uint8_t* mem1, const uint8_t* mem2, const uint32_t count);
 

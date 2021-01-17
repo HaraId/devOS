@@ -2,8 +2,8 @@
 #define __DHARMA_STDIO_H
 
 
-#include "common/types.h"
-#include "common/stdlib.h"
+#include <common/types.h>
+#include <common/stdlib.h>
 
 /*
  *  80 x 25

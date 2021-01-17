@@ -1,7 +1,7 @@
 #ifndef __DHARMA_GDT_H
 #define __DHARMA_GDT_H
 
-#include "common/types.h"
+#include <common/types.h>
 
 /*
  * 

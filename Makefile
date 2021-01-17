@@ -1,19 +1,31 @@
-GPPPARAMS = -m32 -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -fno-exceptions -fno-leading-underscore -Wno-write-strings
+GPPPARAMS = -m32 -Iinclude -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -fno-exceptions -fno-leading-underscore -Wno-write-strings
 ASPARAMS  = --32
 
 LDPARAMS = -melf_i386
 
-objects = loader.o stdio.o gdt.o port.o interruptstubs.o interrupts.o keyboard.o Mouse.o kernel.o
+objects = obj/loader.o \
+		  obj/common/stdlib.o \
+		  obj/tm/stdio.o \
+		  obj/hardwarecommunication/gdt.o \
+		  obj/hardwarecommunication/port.o \
+		  obj/hardwarecommunication/interruptstubs.o \
+		  obj/hardwarecommunication/interrupts.o \
+		  obj/drivers/driver.o\
+		  obj/drivers/PS2Keyboard.o \
+		  obj/drivers/PS2Mouse.o \
+		  obj/kernel.o
 
 bin-files = mykernel.bin mykernel.iso
 
-%.o: %.cpp
+obj/%.o: src/%.cpp
+	mkdir -p $(@D)
 	gcc $(GPPPARAMS) -c -o $@  $<
 	
-%.o: %.s
+obj/%.o: src/%.s
+	mkdir -p $(@D)
 	as $(ASPARAMS) -o $@ $<
 	
-mykernel.bin: linker.ld $(objects)
+mykernel.bin: src/linker.ld $(objects)
 	ld $(LDPARAMS) -T $< -o $@ $(objects)
 	
 install: mykernel.bin 

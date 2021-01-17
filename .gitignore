@@ -3,4 +3,7 @@
 #
 
 obj/
+bin/
 
+*.iso
+*.txt

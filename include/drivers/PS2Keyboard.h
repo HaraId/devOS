@@ -1,13 +1,13 @@
 #ifndef __DHARMA_KEYBOARD_H
 #define __DHARMA_KEYBOARD_H
 
-#include "common/types.h"
-#include "hardwarecommunication/interrupts.h"
-#include "hardwarecommunication/port.h"
+#include <common/types.h>
+#include <hardwarecommunication/interrupts.h>
+#include <hardwarecommunication/port.h>
 
-#include "drivers/driver.h"
+#include <drivers/driver.h>
 
-#include "tx/stdio.h"
+#include <tm/stdio.h>
 
 /*
  IBM PS/2 (i8042) 
