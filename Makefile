@@ -13,6 +13,7 @@ objects = obj/loader.o \
 		  obj/drivers/driver.o\
 		  obj/drivers/PS2Keyboard.o \
 		  obj/drivers/PS2Mouse.o \
+		  obj/hardwarecommunication/pci.o \
 		  obj/kernel.o
 
 bin-files = mykernel.bin mykernel.iso

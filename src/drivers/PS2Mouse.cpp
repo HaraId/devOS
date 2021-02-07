@@ -51,12 +51,17 @@ PS2MouseDriver::~PS2MouseDriver(){}
     m_off = (m_off + 1) % 3;
     
     if ( m_off == 0 )
-    {
-        m_buttonsFlag = m_buff[0];
+    {                                         /// @todo
+        /*m_buttonsFlag = m_buff[0];
         x += m_buff[1];
-        y += m_buff[2];
+        y += m_buff[2];*/
         
-        tm::printByte(m_buttonsFlag);
+        //tm::printByte(m_buff[1]);
+
+        if ( m_buff[1] == 0x09 )
+            tm::scrollUp(1);
+        else if ( m_buff[1] == 0x0A )
+            tm::scrollDown(1);
     }
     
     return esp;

@@ -57,7 +57,7 @@ PS2KeyboardDriver::~PS2KeyboardDriver(){}
 {
     uint8_t key = m_dataPort.Read();
     
-    tm::printString("$KeyboardInterrupt\n");
+    /*tm::printString("$KeyboardInterrupt\n");
     
     if ( key < 0x80 )
     {
@@ -68,7 +68,7 @@ PS2KeyboardDriver::~PS2KeyboardDriver(){}
         }
         
         
-    }
+    }*/
     return esp;
 }
 

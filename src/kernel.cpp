@@ -1,6 +1,7 @@
 #include <tm/stdio.h>
 #include <hardwarecommunication/gdt.h>
 #include <hardwarecommunication/interrupts.h>
+#include <hardwarecommunication/pci.h>
 
 #include <drivers/driver.h>
 
@@ -50,6 +51,8 @@ extern "C" void kernelMain(void* multiboot_struction, uint32_t magicnumber)
     interruptManager.Activate();
     driverManager.ActivateAll();
     
+    PCIManager pci;
+    pci.enumeration();
     
     while( 1 )
     {
