@@ -50,7 +50,7 @@ mykernel.iso: mykernel.bin
 	
 	
 run: mykernel.iso
-	qemu-system-x86_64 -hda bin/dharma.qcow -boot d -cdrom mykernel.iso -m 640
+	qemu-system-x86_64 -hda bin/dharma.qcow  -boot d -cdrom mykernel.iso -m 640 -net nic,model=e1000,macaddr=00:11:22:33:44:55
 	#VirtualBox --startvm "DaramOsi" &
 
 	

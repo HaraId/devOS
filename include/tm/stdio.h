@@ -55,6 +55,8 @@ void printWord(const uint16_t value);
 void printDWord(const uint32_t value);
 void printAddr(const void* addr);
 
+//void printf(const char* format, void* args);
+
 
 
 
